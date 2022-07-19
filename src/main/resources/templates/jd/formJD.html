@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" layout:fragment="page-content"> 
+            <h2 th:text="${titulo}" class="mt-3"></h2>
+            <hr>
+            <form th:action="@{/jd/add}" method="post" enctype="multipart/form-data" th:object="${juntadirectiva}"> 
+               <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                    <input type="text" th:field="*{nombre}" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Organización Social:</label>
+                    <input type="text" th:field="*{orga_social}" class="form-control" name="nombre">
+                </div> 
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Nro Contacto:</label>
+                    <input type="number" th:field="*{nro_contacto}" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Lugar:</label>
+                    <input type="text" th:field="*{lugar}" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Fecha:</label>
+                    <input type="date" th:field="*{fecha}" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{id}">
+                    <label for="recipient-name" class="col-form-label">Link de Archivos:</label>
+                    <input type="text" th:field="*{archivos}" class="form-control" name="nombre">
+                </div>
+                <a th:href="@{/jd/all}" class="btn btn-secondary" >Cancel</a>
+                <input type="submit" class="btn btn-primary"/>
+            </form>
+        </div>
+    </body>
+</html>

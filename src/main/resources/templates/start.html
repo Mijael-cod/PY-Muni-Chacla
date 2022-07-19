@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Municipalidad de Chaclacayo</title>
+        <link th:href="@{/css/style2.css}" rel="stylesheet"/>
+        <link th:href="@{/static/img}" rel="stylesheet"/>
+        <link rel="icon" href="http://www.munichaclacayo.gob.pe/portals/assets/img/view/MDCH_P.jpg">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <p class="logo" style="margin-top: -20px;">
+                    <img src="http://www.munichaclacayo.gob.pe/portals/assets/img/view/MDCH_P.jpg" alt="" style="height: 80px; width: 130px; margin-left: -60px; margin-top: 5px;">
+                    Municipalidad de Chaclacayo!
+                </p>
+                <nav>
+                    <a href="#somos-proya">Quienes Somos</a>
+                    <a href="#nuestros-programas">Datos Extra</a>
+                    <a href="#caracteristicas">Características</a>
+                </nav>
+            </div>
+        </header>
+        <form th:action="@{/login}">
+            <section id="hero">
+                <h1>Registra tu Organización Social <br>con los Mejores</h1>
+                <button class="boton cuatro" >Registra YA!</button>
+            </section>
+        </form>
+        <section id="somos-proya">
+            <div class="container">
+                <div class="img-container"></div>
+                <div class="texto">
+                    <h2>Somos <span class="color-acento">TuMuniSegura!</span></h2>
+                    <p>¡Municipalidad de Chaclacayo! </p>
+                    <p>Atención Lunes a Viernes: 8:00-13:00 / 13:45-16:30 </p>
+                    <p>    MDCH
+                        Av. Nicolás Ayllón 856 Carretera Central Km. 24 Lima - Perú
+                        Aló Rentas: 497-1033 </p>
+                    <p> Portal Web
+                        Municipalidad de Chaclacayo 856, Av. Nicolás de Ayllón, Chaclacayo</p>
+                </div>
+            </div>
+        </section>
+        <section id="nuestros-programas">
+            <div class="container">
+                <h2>Datos Extra</h2>
+                <div class="programas">
+                    <div class="carta">
+                        <h3>Encagado MP</h3><br>
+                        <p>Es un valor referencial que es utilizado para determinar las bases imponibles, deducciones, sanciones, y otras obligaciones formales. Para este año 2018 la UIT ha sido fijada en S/. 4 150,00</p>
+                        <form th:action="@{/login}">
+                            <button >+ Info</button>
+                        </form>
+                    </div>
+                    <div class="carta">
+                        <h3>Gercia</h3> <br>
+                        <p>Son una contraprestación por la prestación de un servicio público por parte de las Municipalidades, son aquellas tasas que se pagan por la prestación, mantenimiento del servicio público, individualizado en el contribuyente.</p>
+                        <form th:action="@{/login}">
+                            <button >+ Info</button>
+                        </form>
+                    </div>
+                    <div class="carta">
+                        <h3>Secretario de Subgerencia</h3>
+                        <p>Es el Impuesto cuya recaudación, administración y fiscalización corresponde a la Municipalidad Distrital donde se ubica el predio. Aplicando al valor de autovalúo, del total de los predios del contribuyente ubicados en cada distrito.</p>
+                        <form th:action="@{/login}">
+                            <button >+ Info</button>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <section id="caracteristicas">
+            <div class="container">
+                <ul>
+                    <li>✔️ 100% online</li>
+                    <li>✔️ Iniciar Sesión</li>
+                    <li>✔️ Crear Cuenta</li>
+                    <li>✔️ Comienza con tu Registro</li>
+                </ul>
+            </div>
+        </section>
+        <form th:href="@{/auth/login}">
+            <section id="final">  
+                <h2>Listo para registrarte?</h2>
+                <button class="btn btn-transition-2">APLICÁ YA!</button>
+            </section>
+        </form>
+        <footer>
+            <div class="container">
+                <p>&copy; My-Sis-Soft 2022</p>
+            </div>
+        </footer>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+    </body>
+</html>

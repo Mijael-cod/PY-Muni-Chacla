@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" layout:fragment="page-content">    
+            <h1>Encargado MP</h1>
+            <hr>
+            <h3>Listar Solicitudes</h3>
+            <br><br>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">ORGANIZACIÓN SOCIAL</th>
+                        <th scope="col">NRO CONTACTO</th>
+                        <th scope="col">LUGAR</th>
+                        <th scope="col">FECHA</th>
+                        <th scope="col">ARCHIVOS</th>
+                        <th scope="col">VISUALIZAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="jd :${juntadirectiva}">
+                        <td th:text="${jd.id}"></td>
+                        <td th:text="${jd.nombre}"></td>
+                        <td th:text="${jd.orga_social}"></td>
+                        <td th:text="${jd.nro_contacto}"></td>
+                        <td th:text="${jd.lugar}"></td>
+                        <td th:text="${jd.fecha}"></td>
+                        <td th:text="${jd.archivos}"></td>
+                        <td>
+                            <a th:href="@{https://www.redalyc.org/pdf/666/66612870011.pdf}"  data-target='#exampleModal' data-toggle='modal' > <i class='fa-solid fa-eye'></i> </a>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+            <br>
+            <div>
+                <button onclick="validado()" class="btn btn-success btn-lg" >Validado</button>
+                <button onclick="rechazado()" class="btn btn-danger btn-lg">No Validado</button>
+            </div>
+            <script th:src="@{/js/alert.js}"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </div>
+         
+    </body>
+</html>

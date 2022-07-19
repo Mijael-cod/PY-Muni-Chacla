@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link rel="icon" href="http://www.munichaclacayo.gob.pe/portals/assets/img/view/MDCH_P.jpg">
+        <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="container" layout:fragment="page-content">  
+            <br>
+            <br>
+            <h2>MODELOS DE FORMATOS</h2>
+            <div class="container"> 
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-info">
+                            <th scope="col"></th>
+                            <th scope="col">Nombre del Formato</th>
+                            <th scope="col">Modelo Formato</th>
+                            <th scope="col">Modelo Para rellenar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SOLICITUD PARA REGISTRO NUEVO DE ORGANIZACIÓN</td>
+                            <td><a th:href="@{/pdf/SOLICITUD.pdf}" download="tarea descarga"><img style="width:30px" src="http://www.ruos.munlima.gob.pe/assets/images/pdf.png"></a></td>
+                            <td><a href="https://docs.google.com/document/d/1VWmlOeVdq8YX6OXDG7obdtkn3SxzZAGw/edit?usp=sharing&ouid=118297208744629039491&rtpof=true&sd=true" ><img style="width:27px" src="http://www.ruos.munlima.gob.pe/assets/images/doc.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>SOLICITUD PARA ACTUALIZACIÓN DE ORGANIZACIÓN</td>
+                            <td><a th:href="@{/pdf/SOLICITUD.pdf}" download="tarea descarga"><img style="width:30px" src="http://www.ruos.munlima.gob.pe/assets/images/pdf.png"></a></td>
+                            <td><a href="https://docs.google.com/document/d/1VWmlOeVdq8YX6OXDG7obdtkn3SxzZAGw/edit?usp=sharing&ouid=118297208744629039491&rtpof=true&sd=true" ><img style="width:27px" src="http://www.ruos.munlima.gob.pe/assets/images/doc.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">3</td>
+                            <td>ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</td>
+                            <td><a th:href="@{/pdf/SOLICITUD.pdf}" download="tarea descarga"><img style="width:30px" src="http://www.ruos.munlima.gob.pe/assets/images/pdf.png"></a></td>
+                            <td><a href="https://docs.google.com/document/d/1VWmlOeVdq8YX6OXDG7obdtkn3SxzZAGw/edit?usp=sharing&ouid=118297208744629039491&rtpof=true&sd=true" ><img style="width:27px" src="http://www.ruos.munlima.gob.pe/assets/images/doc.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ESTATUTO Y ACTA DE APROBACIÓN</td>
+                            <td><a th:href="@{/pdf/SOLICITUD.pdf}" download="tarea descarga" ><img style="width:30px" src="http://www.ruos.munlima.gob.pe/assets/images/pdf.png"></a></td>
+                            <td><a href="https://docs.google.com/document/d/1VWmlOeVdq8YX6OXDG7obdtkn3SxzZAGw/edit?usp=sharing&ouid=118297208744629039491&rtpof=true&sd=true" ><img style="width:27px" src="http://www.ruos.munlima.gob.pe/assets/images/doc.png"></a></td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>ACTA DE FUNDACIÓN O DE CONSTITUCIÓN</td>
+                            <td><a th:href="@{/pdf/SOLICITUD.pdf}" download="tarea descarga"><img style="width:30px" src="http://www.ruos.munlima.gob.pe/assets/images/pdf.png"></a></td>
+                            <td><a href="https://docs.google.com/document/d/1VWmlOeVdq8YX6OXDG7obdtkn3SxzZAGw/edit?usp=sharing&ouid=118297208744629039491&rtpof=true&sd=true" ><img style="width:27px" src="http://www.ruos.munlima.gob.pe/assets/images/doc.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script th:src="@{/js/jquery.js}"></script>       
+        <script th:src="@{/js/bootbox.min.js}"></script>
+        <script th:src="@{/js/bootbox.locales.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/scripts.js}"></script>
+    </body>
+</html>
